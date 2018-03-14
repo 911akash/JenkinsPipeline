@@ -4,7 +4,7 @@ pipeline {
     stage('build_Image_on_Dev') {
       agent{
         docker {
-          image 'ansible/ansible:default'
+          image 'akash/ansible:latest'
         }
       }
       when {
