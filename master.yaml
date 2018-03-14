@@ -3,7 +3,10 @@
   connection: local
   gather_facts: False
   tasks:
-    - name: build the image
-      command: docker build -t akash/ansible-nginx .
+    - name: Build an image and push it to a private repo
+      docker_image:
+      path: .
+      name: akash/testimage
+      tag: v1
 
 
