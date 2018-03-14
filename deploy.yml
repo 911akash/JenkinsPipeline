@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: application container
+      docker:
+        name: myapplication
+        image: akash/testimage:v1
+        state: reloaded
+        pull: always
+        ports:
+        - "8888:80"
