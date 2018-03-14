@@ -5,8 +5,8 @@
   tasks:
     - name: Build an image and push it to a private repo
       docker_image:
-      path: .
-      name: akash/testimage
-      tag: v1
+        path: .
+        name: akash/testimage
+        tag: v1
 
 
