@@ -11,7 +11,7 @@ pipeline {
         branch 'dev'
       }
     steps{
-      sh "ansible-playbook master.yml"
+      sh "ansible-playbook master.yaml"
       }
       }
 
