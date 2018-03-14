@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: build the image
+      command: docker build -t akash/ansible-nginx .
+
+
