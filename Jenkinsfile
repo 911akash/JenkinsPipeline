@@ -4,3 +4,5 @@ pipeline {
     stage('build_Image') {
       sh echo test
     }
+    }
+    }
