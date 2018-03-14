@@ -1,12 +1,17 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('build_Image_on_Dev') {
+    agent{
+      docker {
+        image 'ansible/ansible:default'
+      }
+    }
       when {
         branch 'dev'
       }
     steps{
-      sh "echo 'created the docker image'"
+      sh "ansible-playbook master.yml"
       }
       }
 
