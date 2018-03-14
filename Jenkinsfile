@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build_Image') {
     steps{
-      sh "echo test"
+      ansibl-playbook master.yml
       }
       }
     }
