@@ -11,6 +11,7 @@ pipeline {
         branch 'dev'
       }
       steps{
+        sh "pip install docker-py"
         sh "ansible-playbook master.yaml"
         }
       }
