@@ -6,7 +6,7 @@ pipeline {
         branch 'dev'
       }
     steps{
-      sh "echo 'created the docker image"
+      sh "echo 'created the docker image'"
       }
       }
 
@@ -15,7 +15,7 @@ pipeline {
         branch 'master'
       }
     steps{
-      sh "echo 'deloy the docker image"
+      sh "echo 'deloy the docker image'"
       }
     }
 
