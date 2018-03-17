@@ -7,4 +7,5 @@
       docker_image:
         path: .
         name: akash/testimage
+        repository: akash/testimage
         tag: v1
