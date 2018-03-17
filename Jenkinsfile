@@ -24,7 +24,7 @@ pipeline {
       }
     steps{
       sh "echo 'deploy the docker image'"
-      sh "ansible-playbook deploy.yml"
+      sh "docker run -d -p 8888:80 localhost:5000/akash/testimage:v1"
       }
     }
 
