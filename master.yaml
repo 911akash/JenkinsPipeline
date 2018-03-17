@@ -6,6 +6,6 @@
     - name: Build an image and push it to a private repo
       docker_image:
         path: .
-        name: 911akash/testimage
+        name: akash/testimage
         repository: localhost:5000/akash/testimage
         tag: v1
