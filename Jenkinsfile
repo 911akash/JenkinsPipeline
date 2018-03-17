@@ -18,17 +18,12 @@ pipeline {
       }
 
     stage('on_master'){
-      agent{
-        docker {
-          image 'akash/ansible:latest'
-        }
-      }
+      agent any
       when {
         branch 'master'
       }
     steps{
       sh "echo 'deploy the docker image'"
-      sh "pip install docker-py"
       sh "ansible-playbook deploy.yml"
       }
     }
