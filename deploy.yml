@@ -6,7 +6,7 @@
     - name: application container
       docker:
         name: myapplication
-        image: akash/testimage:v1
+        image: localhost:5000/akash/testimage:v1
         state: reloaded
         pull: always
         ports:
