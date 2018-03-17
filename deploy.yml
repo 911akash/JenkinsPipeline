@@ -4,10 +4,4 @@
   gather_facts: False
   tasks:
     - name: application container
-      docker:
-        name: myapplication
-        image: localhost:5000/akash/testimage:v1
-        state: reloaded
-        pull: always
-        ports:
-        - "8888:80"
+      command: docker run -d -p 8888:80 localhost:5000/akash/testimage:v1
