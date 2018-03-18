@@ -27,6 +27,16 @@ pipeline {
       sh "docker run -d -p 8888:80 localhost:5000/akash/testimage:v1"
       }
     }
-
+    stage('on_master'){
+      agent any
+      when {
+        branch 'master'
+      }
+    steps{
+      sh "echo 'deploy the docker image'"
+      sh "curl -I http://localhost:8888 > test.txt"
+      sh "cat test.txt"
+      }
+    }
     }
   }
