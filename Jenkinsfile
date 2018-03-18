@@ -27,7 +27,7 @@ pipeline {
       sh "docker run -d -p 8888:80 localhost:5000/akash/testimage:v1"
       }
     }
-    stage('on_master'){
+    stage('test'){
       agent any
       when {
         branch 'master'
