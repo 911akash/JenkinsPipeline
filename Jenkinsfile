@@ -24,7 +24,7 @@ pipeline {
       }
     steps{
       sh "echo 'deploy the docker image'"
-      sh "docker run -d -p 8888:80 localhost:5000/akash/testimage:v1 -name localcontainer"
+      sh "docker run -d -p 8888:80 localhost:5000/akash/testimage:v1 --name localcontainer"
       }
     }
     stage('test'){
