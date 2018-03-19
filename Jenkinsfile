@@ -28,7 +28,11 @@ pipeline {
       }
     }
     stage('test'){
-      agent any
+      agent{
+        docker {
+          image 'akash/ansible:latest'
+        }
+      }
       when {
         branch 'master'
       }
