@@ -34,8 +34,7 @@ pipeline {
       }
     steps{
       sh "echo 'deploy the docker image'"
-      sh "curl -I http://localcontainer:8888 > test.txt"
-      sh "cat test.txt"
+      sh "curl -sw '%{http_code}' docker.for.mac.localhost:88888"
       }
     }
     }
