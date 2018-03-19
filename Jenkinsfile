@@ -38,7 +38,7 @@ pipeline {
       }
     steps{
       sh "echo 'test the docker image'"
-      sh "curl -sw '%{http_code}' docker.for.mac.localhost:88888"
+      sh "curl -sw '%{http_code}' docker.for.mac.localhost:8888"
       }
     }
     }
