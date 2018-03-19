@@ -37,8 +37,8 @@ pipeline {
         branch 'master'
       }
     steps{
-      sh "echo 'deploy the docker image'"
-      sh "curl -sw '%{http_code}' localhost:88888"
+      sh "echo 'test the docker image'"
+      sh "curl -sw '%{http_code}' docker.for.mac.localhost:88888"
       }
     }
     }
