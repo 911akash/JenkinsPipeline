@@ -1,7 +1,7 @@
 pipeline {
   agent none
   stages {
-    stage('build_Image_on_Dev') {
+    stage('build_Dev') {
       agent{
         docker {
           image 'akash/ansible:latest'
@@ -28,11 +28,7 @@ pipeline {
       }
     }
     stage('test'){
-      agent{
-        docker {
-          image 'akash/ansible:latest'
-        }
-      }
+      agent any
       when {
         branch 'master'
       }
